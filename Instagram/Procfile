@@ -1,3 +1,4 @@
-web: gunicorn ToDo-Rest.wsgi
+web: gunicorn InstagramAPI.wsgi
 release: python manage.py makemigrations --noinput
 release: python manage.py migrate --noinput
+web: gunicorn dep:instagramapi69
