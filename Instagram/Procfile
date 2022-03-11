@@ -1,4 +1,3 @@
-web: gunicorn InstagramAPI.wsgi
+web: gunicorn dep:instagramapi.wsgi
 release: python manage.py makemigrations --noinput
 release: python manage.py migrate --noinput
-web: gunicorn dep:instagramapi69
