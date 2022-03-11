@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'feed',
     'rest_framework_simplejwt',
+    'drf_yasg',
+    'django_elasticsearch_dsl'
 ]
 
 MIDDLEWARE = [
@@ -44,6 +46,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Instagram.urls'
+
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
 
 TEMPLATES = [
     {
@@ -124,3 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INSTA_ACCOUNT='users.Account'
 
 django_heroku.settings(locals())
+
+ACC = 'users.Account'
